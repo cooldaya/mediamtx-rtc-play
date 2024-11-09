@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./mtx-rtsp-webrtc.js"></script>
+    <style>
+        .container {
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+    <script>
+        StreamController.mountPlayer({
+            el: '.container',
+            url: 'rtsp://admin:asd12345@10.1.10.8:554/h264/chD1/main/av_stream',
+            toh264:false, // 当是h265时，需要设置为true
+        })
+    </script>
+</body>
+
+</html>
